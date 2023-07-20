@@ -18,12 +18,12 @@ public class Product {
 
     // COSTRUTTORI
 
-    public Product(int code){
-        this.code= new Random().nextInt(1,100000000);
-    }
+    Random random = new Random();
+
+
 
     public Product(String name, String description, double price, double iva){
-
+        this.code = random.nextInt(0, 999999999) + 1 ;
         this.name=name;
         this.description= description;
         this.price= price;
@@ -83,4 +83,13 @@ public class Product {
                 ", iva=" + iva +
                 '}';
     }
+
+    public double getPricePlusIva(){
+        double PricePlusIva = price + (price * iva / 100);
+        return PricePlusIva;
+    }
+
+
+
+
 }
