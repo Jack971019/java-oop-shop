@@ -25,7 +25,7 @@ public class Product {
 
 
     public Product(String name, String description, double price, double iva){
-        this.code = random.nextInt(0, 999999999) + 1 ;
+        this.code = random.nextInt(0, 99999999) + 1 ;
         this.name=name;
         this.description= description;
         this.price= price;
@@ -98,8 +98,17 @@ public class Product {
     // metodo per concatenare nome e codice
 
     public String getcodeName(){
-        String codeName = code + name ;
+        String codeName = getCodePadded()+ "-" + name ;
         return codeName;
+    }
+
+    private String getCodePadded(){
+        String code = String.valueOf(this.code);
+        while(code.length() < 8){
+            code = "0" + code;
+
+        }
+        return code;
     }
 
 
