@@ -24,9 +24,12 @@ public class Main {
 
         System.out.println("Codice prodotto:"+ product.getCode());
         System.out.println("Nome prodotto:"+ product.getName());
-        System.out.println("Nome prodotto:"+ product.getDescription());
-        System.out.println("Nome prodotto:"+ product.getPrice());
+        System.out.println("Descrizione del prodotto:"+ product.getDescription());
+        System.out.println("Prezzo base:"+ product.getPrice());
         System.out.println("Nome prodotto:"+ product.getPricePlusIva());
+
+
+        System.out.println("Id prodotto:" + product.getcodeName());
 
 
 

@@ -14,6 +14,8 @@ public class Product {
 
     private double price;
 
+
+
     private double iva;
 
     // COSTRUTTORI
@@ -27,6 +29,7 @@ public class Product {
         this.name=name;
         this.description= description;
         this.price= price;
+
         this.iva=iva;
     }
 
@@ -60,6 +63,7 @@ public class Product {
         this.price = price;
     }
 
+
     public double getIva() {
         return iva;
     }
@@ -84,9 +88,18 @@ public class Product {
                 '}';
     }
 
+
+
     public double getPricePlusIva(){
         double PricePlusIva = price + (price * iva / 100);
         return PricePlusIva;
+    }
+
+    // metodo per concatenare nome e codice
+
+    public String getcodeName(){
+        String codeName = code + name ;
+        return codeName;
     }
 
 
